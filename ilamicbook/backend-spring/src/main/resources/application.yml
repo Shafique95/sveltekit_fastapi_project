@@ -1,0 +1,37 @@
+# Server Configuration
+server:
+  port: 8000
+
+# Application Info
+spring:
+  application:
+    name: ilamicbook-backend
+  profiles:
+    active: dev
+
+# Logging Configuration
+logging:
+  level:
+    com.ilamicbook.backend: INFO
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+# Custom Application Properties
+app:
+  name: IlamicBook API
+  version: 1.0.0
+  description: Spring Boot backend for IlamicBook 

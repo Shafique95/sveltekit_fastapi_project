@@ -1,0 +1,46 @@
+# Node.js Application Configuration
+app:
+  name: IlamicBook API
+  version: 1.0.0
+  description: Node.js backend for IlamicBook
+
+# Server Configuration
+server:
+  host: 0.0.0.0
+  port: 8000
+  mode: development
+
+# CORS Configuration
+cors:
+  origins:
+    - http://localhost:5173
+    - http://127.0.0.1:5173
+  credentials: true
+  methods:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+    - OPTIONS
+  headers:
+    - Content-Type
+    - Authorization
+  max_age: 12h
+
+# Logging Configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# API Configuration
+api:
+  prefix: /api
+  version: v1
+  title: IlamicBook API
+  description: Node.js backend for IlamicBook
+
+# Security Configuration
+security:
+  helmet: true
+  cors: true
+  rate_limit: false 
